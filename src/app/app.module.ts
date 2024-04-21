@@ -10,6 +10,10 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { VehiclePageComponent } from './pages/vehicle-page/vehicle-page.component';
+import { LoginRegisterPageComponent } from './pages/login-register-page/login-register-page.component';
+import { RentNowComponent } from './pages/vehicle-page/rent-now/rent-now.component';
+
+
 
 @NgModule({
   declarations: [
@@ -18,7 +22,9 @@ import { VehiclePageComponent } from './pages/vehicle-page/vehicle-page.componen
     HomePageComponent,
     NavBarComponent,
     FooterComponent,
-    VehiclePageComponent
+    VehiclePageComponent,
+    LoginRegisterPageComponent,
+    RentNowComponent
   ],
   imports: [
     BrowserModule,
