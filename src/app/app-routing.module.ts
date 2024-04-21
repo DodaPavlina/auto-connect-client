@@ -4,7 +4,7 @@ import {HomePageComponent} from "./pages/home-page/home-page.component";
 import {ContactPageComponent} from "./pages/contact-page/contact-page.component";
 import {VehiclePageComponent} from "./pages/vehicle-page/vehicle-page.component";
 import { LoginRegisterPageComponent } from './pages/login-register-page/login-register-page.component';
-import { RentNowComponent } from './pages/vehicle-page/rent-now/rent-now.component';
+import {VehicleDetailPageComponent} from "./pages/vehicle-detail-page/vehicle-detail-page.component";
 
 
 
@@ -15,9 +15,7 @@ const routes: Routes = [
   {path: 'contact', component: ContactPageComponent},
   {path: 'vehicles', component: VehiclePageComponent},
   {path: 'login|register', component: LoginRegisterPageComponent},
-  {path: 'rentnow', component: RentNowComponent},
-
-
+  {path: 'vehicle-detail/:id', component: VehicleDetailPageComponent},
 ];
 
 @NgModule({

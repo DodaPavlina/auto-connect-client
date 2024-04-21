@@ -11,7 +11,8 @@ import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { VehiclePageComponent } from './pages/vehicle-page/vehicle-page.component';
 import { LoginRegisterPageComponent } from './pages/login-register-page/login-register-page.component';
-import { RentNowComponent } from './pages/vehicle-page/rent-now/rent-now.component';
+import { VehicleDetailPageComponent } from './pages/vehicle-detail-page/vehicle-detail-page.component';
+import { PageHeaderComponent } from './shared/page-header/page-header.component';
 
 
 
@@ -24,7 +25,8 @@ import { RentNowComponent } from './pages/vehicle-page/rent-now/rent-now.compone
     FooterComponent,
     VehiclePageComponent,
     LoginRegisterPageComponent,
-    RentNowComponent
+    VehicleDetailPageComponent,
+    PageHeaderComponent
   ],
   imports: [
     BrowserModule,
