@@ -27,3 +27,5 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.content span')?.textContent).toContain('auto-connect-client app is running!');
   });
 });
+
+

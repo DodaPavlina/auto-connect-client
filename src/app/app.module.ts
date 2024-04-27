@@ -16,6 +16,7 @@ import { PageHeaderComponent } from './shared/page-header/page-header.component'
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { PageHeaderComponent } from './shared/page-header/page-header.component'
     VehiclePageComponent,
     LoginRegisterPageComponent,
     VehicleDetailPageComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+
   ],
   imports: [
     BrowserModule,
