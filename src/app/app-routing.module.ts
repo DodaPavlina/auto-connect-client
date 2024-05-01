@@ -5,6 +5,7 @@ import {ContactPageComponent} from "./pages/contact-page/contact-page.component"
 import {VehiclePageComponent} from "./pages/vehicle-page/vehicle-page.component";
 import { LoginRegisterPageComponent } from './pages/login-register-page/login-register-page.component';
 import {VehicleDetailPageComponent} from "./pages/vehicle-detail-page/vehicle-detail-page.component";
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
 
 
@@ -15,7 +16,7 @@ const routes: Routes = [
   {path: 'contact', component: ContactPageComponent},
   {path: 'vehicles', component: VehiclePageComponent},
   {path: 'login', component: LoginRegisterPageComponent},
-  {path: 'login-register/:id', component: LoginRegisterPageComponent},
+  {path: 'register-page/:id', component: RegisterPageComponent},
   {path: 'vehicle-detail/:id', component: VehicleDetailPageComponent},
 ];
 
