@@ -14,6 +14,7 @@ import { LoginRegisterPageComponent } from './pages/login-register-page/login-re
 import { VehicleDetailPageComponent } from './pages/vehicle-detail-page/vehicle-detail-page.component';
 import { PageHeaderComponent } from './shared/page-header/page-header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterComponent } from './shared/filter/filter.component';
 
 
 
@@ -28,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoginRegisterPageComponent,
     VehicleDetailPageComponent,
     PageHeaderComponent,
+    FilterComponent,
 
   ],
   imports: [
