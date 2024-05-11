@@ -13,7 +13,7 @@ import { VehiclePageComponent } from './pages/vehicle-page/vehicle-page.componen
 import { LoginRegisterPageComponent } from './pages/login-register-page/login-register-page.component';
 import { VehicleDetailPageComponent } from './pages/vehicle-detail-page/vehicle-detail-page.component';
 import { PageHeaderComponent } from './shared/page-header/page-header.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -34,7 +34,8 @@ import { PageHeaderComponent } from './shared/page-header/page-header.component'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ButtonsModule.forRoot()
+    ButtonsModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="profileApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+</head>
+<body>
+
+<div ng-controller="ProfileController">
+  <!-- Container for user details -->
+  <div class="user-details">
+    <h2>User Details</h2>
+    <div>
+      <strong>Name:</strong> {{ user.name }}
+    </div>
+    <div>
+      <strong>Email:</strong> {{ user.email }}
+    </div>
+    <div>
+      <strong>Location:</strong> {{ user.location }}
+    </div>
+    <!-- You can add more user details here -->
+  </div>
+
+  <!-- Container for products owned by the user -->
+  <div class="user-products">
+    <h2>User's Products</h2>
+    <ul>
+      <li ng-repeat="product in user.products">{{ product }}</li>
+    </ul>
+    <button ng-click="showAddProductForm = !showAddProductForm">Add Product</button>
+    <!-- Form to add a new product -->
+  <!-- Form to add a new car -->
+<div ng-show="showAddProductForm">
+  <input type="text" ng-model="newCar.model" placeholder="Model">
+  <input type="text" ng-model="newCar.description" placeholder="Description">
+  <input type="text" ng-model="newCar.consumption" placeholder="Consumption">
+  <select ng-model="newCar.fuelType">
+    <option value="PETROL">Petrol</option>
+    <option value="DIESEL">Diesel</option>
+    <option value="ELECTRIC">Electric</option>
+  </select>
+  <input type="number" ng-model="newCar.year" placeholder="Year">
+  <input type="number" ng-model="newCar.price" placeholder="Price">
+  <input type="checkbox" ng-model="newCar.sale"> On Sale
+  <input type="number" ng-model="newCar.salePrice" placeholder="Sale Price">
+  <input type="text" ng-model="newCar.imagePath" placeholder="Image Path">
+  <input type="text" ng-model="newCar.imageName" placeholder="Image Name">
+  <input type="number" ng-model="newCar.brandId" placeholder="Brand ID">
+  <!-- Assuming userId is not manually entered but fetched from the logged-in user -->
+  <input type="hidden" ng-model="newCar.userId" value="{{ user.id }}">
+  <button ng-click="addCar()">Save</button>
+</div>
+
+  </div>
+</div>
+
+<script>
+  angular.module('profileApp', [])
+    .controller('ProfileController', function($scope) {
+      $scope.user = {
+        name: 'J ',
+        email: 'a@example.com',
+        location: 'Tirane',
+        products: ['Product 1', 'Product 2', 'Product 3']
+        // You can add more user details and products here
+      };
+
+      // Function to add a new product
+      $scope.addProduct = function() {
+        if ($scope.newProduct) {
+          $scope.user.products.push($scope.newProduct);
+          $scope.newProduct = ''; // Clear input after adding
+        }
+      };
+    });
+</script>
+
+</body>
+</html>
