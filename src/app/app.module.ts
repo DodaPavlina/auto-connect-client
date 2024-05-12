@@ -15,6 +15,7 @@ import { VehicleDetailPageComponent } from './pages/vehicle-detail-page/vehicle-
 import { PageHeaderComponent } from './shared/page-header/page-header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterComponent } from './shared/filter/filter.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -32,13 +33,14 @@ import { FilterComponent } from './shared/filter/filter.component';
     FilterComponent,
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    ButtonsModule.forRoot(),
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        ButtonsModule.forRoot(),
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

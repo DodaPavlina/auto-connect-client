@@ -2,148 +2,158 @@
 <html lang="en">
 
 <body>
-  <app-page-header></app-page-header>
+<app-page-header></app-page-header>
 
-  <div class="container mt-3">
-    <div class="row">
-      <div class="col-md-6 mb-12">
-        <div class="car-images swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img class="img-fluid w-100" src="assets/images/car_1.jpg" alt="">
-            </div>
-            <div class="swiper-slide">
-              <img class="img-fluid w-100" src="assets/images/car_2.jpg" alt="">
-            </div>
-            <!-- Add more swiper-slide divs for additional images -->
+<div class="container mt-3">
+  <div class="row" *ngIf="model">
+    <div class="col-md-6 mb-12">
+      <div class="car-images swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img class="img-fluid w-100" src="assets/images/car_1.jpg" alt="">
           </div>
-          <!-- Add pagination and navigation buttons if needed -->
-          <div class="swiper-pagination"></div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-slide">
+            <img class="img-fluid w-100" src="assets/images/car_2.jpg" alt="">
+          </div>
+          <!-- Add more swiper-slide divs for additional images -->
         </div>
-        <div class="row">
-          <div class="col text-center"> <!-- Added text-center class -->
-            <h4><strong>Description</strong></h4> <!-- Added strong tag for bold text -->
-            <p>nkjvshdfjskdmcdmd</p>
-          </div>
+        <!-- Add pagination and navigation buttons if needed -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div class="row">
+        <div class="col text-center"> <!-- Added text-center class -->
+          <h4><strong>{{model?.model}}</strong></h4> <!-- Added strong tag for bold text -->
+          <p>{{model?.description}}</p>
         </div>
+      </div>
 
 
-        <div class="row">
-          <div class="col-md d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
+      <div class="row">
+        <div class="col-md d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
 
-              <div class="media block-6 services">
-                  <div class="media-body py-md-4">
-                      <div class="d-flex align-items-center">
-                          <div class="icon"><span class="flaticon-dashboard"></span></div>
-                          <div class="text pl-3">
-                              <h3 class="heading mb-0">Mileage</h3>
-                              <span>40,000</span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
-              <div class="media block-6 services">
-                  <div class="media-body py-md-4">
-                      <div class="d-flex align-items-center">
-                          <div class="icon"><span class="flaticon-pistons"></span></div>
-                          <div class="text pl-3">
-                              <h3 class="heading mb-0">Transmission</h3>
-                              <span>Manual</span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
-              <div class="media block-6 services">
-                  <div class="media-body py-md-4">
-                      <div class="d-flex align-items-center">
-                          <div class="icon"><span class="flaticon-car-seat"></span></div>
-                          <div class="text pl-3">
-                              <h3 class="heading mb-0">Seats</h3>
-                              <span>5 Adults</span>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
-            <div class="media block-6 services">
-                <div class="media-body py-md-4">
-                    <div class="d-flex align-items-center">
-                        <div class="icon"><span class="flaticon-car-seat"></span></div>
-                        <div class="text pl-3">
-                            <h3 class="heading mb-0">Fuel</h3>
-                            <span>5 Petrol</span>
-                        </div>
-                    </div>
+          <div class="media block-6 services">
+            <div class="media-body py-md-4">
+              <div class="d-flex align-items-center">
+                <div class="icon"><span class="flaticon-dashboard"></span></div>
+                <div class="text pl-3">
+                  <h3 class="heading mb-0">Fuel type</h3>
+                  <span>{{model.fuelType}}</span>
                 </div>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="col-md d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
+          <div class="media block-6 services">
+            <div class="media-body py-md-4">
+              <div class="d-flex align-items-center">
+                <div class="icon"><span class="flaticon-pistons"></span></div>
+                <div class="text pl-3">
+                  <h3 class="heading mb-0">Transmission</h3>
+                  <span>Manual</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
+          <div class="media block-6 services">
+            <div class="media-body py-md-4">
+              <div class="d-flex align-items-center">
+                <div class="icon"><span class="flaticon-car-seat"></span></div>
+                <div class="text pl-3">
+                  <h3 class="heading mb-0">Seats</h3>
+                  <span>5 Adults</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md d-flex align-self-stretch ftco-animate fadeInUp ftco-animated">
+          <div class="media block-6 services">
+            <div class="media-body py-md-4">
+              <div class="d-flex align-items-center">
+                <div class="icon"><span class="flaticon-car-seat"></span></div>
+                <div class="text pl-3">
+                  <h3 class="heading mb-0">Fuel</h3>
+                  <span>5 Petrol</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
 
-
-      </div>
-
-
-      <div class="col-md-5 mb-5">
-        <div class="row no-gutters">
-          <div class="col-md-12 featured-top">
-            <div class="row no-gutters">
-              <div class="col-md-12 d-flex align-items-center">
-                <form action="#" class="request-form ftco-animate" style="border: 1px solid #ced4da; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); padding: 20px;">
-                  <!-- Added border, border-radius, and box-shadow to create the 3D effect -->
-                  <h2>Book Now</h2>
-                  <div class="form-group">
-                    <label for="name" class="label">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Name">
+    </div>
+    <div class="col-md-5 mb-5">
+      <div class="row no-gutters">
+        <div class="col-md-12 featured-top">
+          <div class="row no-gutters">
+            <div class="col-md-12 d-flex align-items-center">
+              <form action="#" class="request-form ftco-animate"
+                    style="border: 1px solid #ced4da; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); padding: 20px;">
+                <!-- Added border, border-radius, and box-shadow to create the 3D effect -->
+                <h2>Book Now</h2>
+                <div class="form-group">
+                  <label for="name" class="label">Name</label>
+                  <input type="text" class="form-control" id="name" name="firstName" [(ngModel)]="booking.firstName" placeholder="Name">
+                </div>
+                <div class="form-group">
+                  <label for="last_name" class="label">Last Name</label>
+                  <input type="text" class="form-control" id="last_name" name="firstName" [(ngModel)]="booking.lastName" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                  <label for="phone" class="label">Phone Number</label>
+                  <input type="text" class="form-control" id="phone" name="phoneNumber" [(ngModel)]="booking.phoneNumber" placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                  <label for="email" class="label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" [(ngModel)]="booking.email"  placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <label for="pickup_location" class="label">Pick-up location</label>
+                  <input type="text" class="form-control" id="pickup_location"
+                         name="pickUpCity" [(ngModel)]="booking.pickUpCity"
+                         placeholder="City, Airport, Station, etc">
+                </div>
+                <div class="form-group">
+                  <label for="dropoff_location" class="label">Drop-off location</label>
+                  <input type="text" class="form-control" id="dropoff_location"
+                         name="dropOffCity" [(ngModel)]="booking.dropOffCity"
+                         placeholder="City, Airport, Station, etc">
+                </div>
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="pickup_date" class="label">Pick-up date</label>
+                    <input type="text" class="form-control" name="pickUpDate" [(ngModel)]="booking.pickUpDate" id="pickup_date" placeholder="Date">
                   </div>
-                  <div class="form-group">
-                    <label for="last_name" class="label">Last Name</label>
-                    <input type="text" class="form-control" id="last_name" placeholder="Last Name">
+                  <div class="form-group col-md-6">
+                    <label for="dropoff_date" class="label">Days</label>
+                    <input type="text" class="form-control" id="dropoff_date" name="days"  [(ngModel)]="booking.days" />
                   </div>
-                  <div class="form-group">
-                    <label for="phone" class="label">Phone Number</label>
-                    <input type="text" class="form-control" id="phone" placeholder="Phone Number">
-                  </div>
-                  <div class="form-group">
-                    <label for="email" class="label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="Email">
-                  </div>
-                  <div class="form-group">
-                    <label for="pickup_location" class="label">Pick-up location</label>
-                    <input type="text" class="form-control" id="pickup_location" placeholder="City, Airport, Station, etc">
-                  </div>
-                  <div class="form-group">
-                    <label for="dropoff_location" class="label">Drop-off location</label>
-                    <input type="text" class="form-control" id="dropoff_location" placeholder="City, Airport, Station, etc">
-                  </div>
-                  <div class="row">
-                    <div class="form-group col-md-6">
-                      <label for="pickup_date" class="label">Pick-up date</label>
-                      <input type="text" class="form-control" id="pickup_date" placeholder="Date">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="dropoff_date" class="label">Drop-off date</label>
-                      <input type="text" class="form-control" id="dropoff_date" placeholder="Date">
-                    </div>
-                  </div>
-                  <div style="margin: 10px; padding: 10px;" class="form-group mt-3">
-                    <input type="submit" value="Rent A Car Now" class="btn btn-secondary btn-block" style="padding: 10px;">
-                  </div>
-                </form>
-              </div>
+                </div>
+                <div style="margin: 10px; padding: 10px;" class="form-group mt-3">
+                  <!--<div *ngIf="model && booking && booking.days">Total: {{model.price * booking.days}}</div>-->
+                  <button class="btn btn-secondary btn-block"
+                          style="padding: 10px;" (click)="doBooking()">Rent A Car Now</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="row" *ngIf="!model && !loading">
+    <div class="col-12 text-danger">Vehicle not found!</div>
+  </div>
+  <div class="row" *ngIf="loading">
+    <div class="col-12 text-info">Loading details...!</div>
+  </div>
+</div>
 
 
 </body>
